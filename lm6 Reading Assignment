@@ -1,0 +1,27 @@
+## Key Takeaways
+1.PowerShell works with objects instead of only plain text, and objects contain useful properties and methods.
+2. Get-Member can be used to inspect an object and identify its properties, methods, and object type.
+3. Where-Object can filter objects based on property values so an administrator can focus on specific information.
+## VM Investigation
+### Object TypeMicrosoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView
+### Useful Properties
+- Name
+- ResourceGroupName
+- PowerState
+## Filtering Example
+What changed after filtering?
+The output changed by showing only virtual machines whose PowerState was "VM running". Virtual machines that did not match that condition were filtered out.
+## Variable Practice
+Why would storing filtered data be useful?
+Storing filtered data in a variable would be useful because I could reuse the results without running the full command again. This would make it easier to analyze, display, or perform additional actions on the same group of VMs.
+## AI Reflection
+### Did AI help?
+Yes, indeed AI helped explain Where-Object in simpler terms and helped me understand how it filters PowerShell objects based on a condition.
+### What should be verified?
+The command syntax
+## Final Reflection
+
+How could filtering help a cloud administrator?
+Filtering can help a cloud administrator quickly find the resources that match a specific condition. For example, an administrator could filter virtual machines by power state to see only running or stopped VMs instead of reviewing every VM manually.
+What question do I still have?
+How can I combine multiple Where-Object conditions to filter Azure resources by more than one property at the same time?
